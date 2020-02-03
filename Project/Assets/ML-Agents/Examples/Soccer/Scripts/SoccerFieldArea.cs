@@ -159,7 +159,7 @@ public class SoccerFieldArea : MonoBehaviour
         ballRb.velocity = Vector3.zero;
         ballRb.angularVelocity = Vector3.zero;
 
-        var ballScale = Academy.Instance.FloatProperties.GetPropertyWithDefault("ball_scale", 0.015f);
+        var ballScale = Academy.Instance.FloatProperties.GetPropertyWithDefault("ball_scale", 8.0f);
         ballRb.transform.localScale = new Vector3(ballScale, ballScale, ballScale);
     }
 }

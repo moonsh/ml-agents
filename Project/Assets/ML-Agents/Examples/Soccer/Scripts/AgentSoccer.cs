@@ -195,4 +195,62 @@ public class AgentSoccer : Agent
     {
         area.ResetBall();
     }
+
+
+    public override float[] Heuristic()
+    {
+        if (agentRole == AgentRole.Goalie)
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                return new float[] { 3 };
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                return new float[] { 1 };
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                return new float[] { 4 };
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                return new float[] { 2 };
+            }
+            if (Input.GetKey(KeyCode.Q))
+            {
+                return new float[] { 5 };
+            }
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                return new float[] { 3 };
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                return new float[] { 1 };
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                return new float[] { 4 };
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                return new float[] { 2 };
+            }
+            if (Input.GetKey(KeyCode.Q))
+            {
+                return new float[] { 5 };
+            }
+            //if (Input.GetKey(KeyCode.E))
+            //{
+            //    return new float[] { 6 };
+            //}
+        }
+        return new float[] { 0 };
+    }
+
+
 }
